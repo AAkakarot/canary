@@ -5,7 +5,12 @@ metadata:
   namespace: canary
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "nginx"
 spec:
+  tls:
+  - hosts:
+    - rollouts-demo.kind.cluster
+    secretName: rollouts-demo-tls  # Ensure this secret exists
   rules:
   - host: rollouts-demo.kind.cluster
     http:
