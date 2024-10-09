@@ -1,0 +1,23 @@
+# argo-rollouts/overlays/probes/probes.yaml
+apiVersion: apps/v1
+kind: Rollout
+metadata:
+  name: rollouts-demo
+  namespace: canary
+spec:
+  template:
+    spec:
+      containers:
+        - name: rollouts-demo
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 20
