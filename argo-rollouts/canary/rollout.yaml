@@ -14,16 +14,16 @@ spec:
       steps:
         - setWeight: 20
         - pause: 
-            duration: 10s
+            duration: 20s
         - setWeight: 40
         - pause:
-            duration: 10s
+            duration: 20s
         - setWeight: 60
         - pause: 
-            duration: 10s
+            duration: 20s
         - setWeight: 80
         - pause:
-            duration: 10s
+            duration: 20s
         - setWeight: 100
   template:
     metadata:
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo
-          image: argoproj/rollouts-demo:blue
+          image: argoproj/rollouts-demo:green
           livenessProbe:
             httpGet:
               path: /
