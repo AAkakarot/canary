@@ -1,5 +1,4 @@
-# argo-rollouts/overlays/probes/probes.yaml
-apiVersion: apps/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollouts-demo
