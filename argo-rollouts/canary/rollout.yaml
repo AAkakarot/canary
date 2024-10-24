@@ -13,13 +13,13 @@ spec:
     canary:
       steps:
         - setWeight: 20
-        - pause: {}
+        - pause: 
+            duration: 100s
         - setWeight: 40
         - pause:
-            duration: 10s
+            duration: 100s
         - setWeight: 60
-        - pause:
-            duration: 50s
+        - pause: {}
         - setWeight: 80
         - pause:
             duration: 100s
