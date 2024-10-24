@@ -11,12 +11,12 @@ spec:
           readinessProbe:
             httpGet:
               path: /healthz
-              port: http
+              port: 443
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /healthz
-              port: http
+              port: 443
             initialDelaySeconds: 15
             periodSeconds: 20
